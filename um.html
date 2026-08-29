@@ -1,0 +1,16 @@
+<!-- Clean HTML Button -->
+<button id="bro">Click Me</button>
+
+<script>
+  // Function to fetch the HTML content and display it
+    fetch('https://cdn.jsdelivr.net/gh/entraptadoeztech/prodigy-single-file@refs/heads/main/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('bro').innerHTML = data;
+            console.log('Fetching Complete!!!!!!')
+            alert('Use the html in an about blank page')
+        })
+        .catch(error => {
+            console.error('Error fetching the HTML:', error);
+        });
+</script>
